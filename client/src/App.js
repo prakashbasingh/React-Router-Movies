@@ -1,4 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useState } from 'react';
+// STEP 2 - import Route, Switch and Link from react router
+import { Route, Switch, Link } from 'react-router-dom'
+
+import axios from 'axios'
 
 import SavedList from './Movies/SavedList';
 

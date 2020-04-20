@@ -1,7 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+// 👉 Importing React libs from node_modules folder
 
-import './index.css';
+import React from 'react';
+import { render } from 'react-dom'
+
+
+// 👉 STEP 1 - Importing React Router's Router
+import { BrowserRouter as Router } from 'react-router-dom'
+
+
+// 👉 Importing the top-level component
 import App from './App';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+render(
+    <Router>
+      <App /> 
+    </Router>
+    , document.getElementById('root')
+);

@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import {useParams} from 'react-router-dom';
-import MovieCard from './MovieCard';
 
 const Movie = (props) => {
   const [movie, setMovie] = useState();
   const {id} = useParams();
-    console.log(id, 'what do i get????')
+    console.log(id, 'what ID am I getting????')
 
 
   useEffect(() => {

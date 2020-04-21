@@ -8,14 +8,10 @@ import SavedList from './Movies/SavedList';
 import MovieList from './Movies/MovieList';
 import Movie from './Movies/Movie';
 
+const MovieDataURL = 'http://localhost:5000/api/movies'
+
 const App = () => {
   const [savedList, setSavedList] = useState([]);
-
-  const [movies, setMovies] = useState([]);
-
-
-
-
 
   const addToSavedList = movie => {
     setSavedList([...savedList, movie]);
@@ -32,7 +28,7 @@ const App = () => {
           </Route>
 
           <Route path = '/'>
-            <MovieList movies = {movies}/>
+            <MovieList/>
           </Route>
         </Switch>
       </div>

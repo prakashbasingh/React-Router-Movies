@@ -1,12 +1,22 @@
 import React from 'react';
+import {NavLink, Route, Switch, Link } from 'react-router-dom'
 
 const SavedList = props => (
   <div className="saved-list">
     <h3>Saved Movies:</h3>
     {props.list.map(movie => (
-      <span className="saved-movie">{movie.title}</span>
+      // when movie card clicked it will display only clicked movie detail
+      <NavLink to = {`/movies/${movie.id}`}>
+        <span className="saved-movie">{movie.title}</span>
+      </NavLink>
+
     ))}
-    <div className="home-button">Home</div>
+    {/* no home button on home page, appears on movie detail page and when clicked it will bring home page back */}
+    <Route path='/movies/:id'> 
+      <Link to='/'>
+        <div className="home-button">Home</div>
+      </Link>
+    </Route>
   </div>
 );
 
